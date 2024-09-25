@@ -1,5 +1,6 @@
 package testcases;
 
+import java.awt.Dimension;
 import java.awt.Robot;
 import java.awt.Toolkit;
 import java.awt.datatransfer.Clipboard;
@@ -29,6 +30,7 @@ public class FileUploadUsingRobot {
 		String text = "Resume_Sandeep1.doc";
 		StringSelection stringSelection = new StringSelection(text);
 		Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+		//Dimension dimension = Toolkit.getDefaultToolkit().getScreenSize(); //not related to upload file ... pls ignore
 		clipboard.setContents(stringSelection, stringSelection);
 
 		Robot r = new Robot();
